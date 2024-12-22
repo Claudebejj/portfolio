@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* styles/fonts.css */
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  /* background: linear-gradient(304deg, #ebf9ff, #FFEEC9); */
+  /* background: linear-gradient(304deg, #C3F4DD, #FFFDCB); */
+  /* background: linear-gradient(135deg, #9BDAF9, #FFF8E5); */
+  background: linear-gradient(160deg, #f2ffff, #FFDDB0);
+
+
+
+  background-attachment: fixed;
+  min-height: 100vh;
+  /* background-image: url('/bg.svg'); */
+  color: rgb(var(--foreground-rgb));
+  /* background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 1;
+}
+
+.dot.medium {
+  width: 20px;
+  height: 20px;
+}
+
+.dot.large {
+  width: 25px;
+  height: 25px;
+}
+
+@keyframes dotAnimation {
+  0% { opacity: 1; }
+  33.3% { opacity: 0.3; }
+  66.6% { opacity: 0.6; }
+  100% { opacity: 0; }
+}
+
+.dot:nth-child(1) { animation: dotAnimation 1.5s infinite ease-in-out; }
+.dot:nth-child(2) { animation: dotAnimation 1.5s infinite ease-in-out 0.5s; }
+.dot:nth-child(3) { animation: dotAnimation 1.5s infinite ease-in-out 1s; }
+
+h2{font-size: 22px;font-weight: 600;}
+@layer base {
+  .pageContent a {
+    @apply text-blue-500;
+  }
+  .pageContent a:hover {
+    @apply underline
+  }
+}

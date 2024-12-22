@@ -1,0 +1,10 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <pattern id="gridPattern" width="10" height="10" patternUnits="userSpaceOnUse">
+    <!-- The following two rectangles define the grid pattern -->
+    <rect width="5" height="5" fill="#f0f0f0" />
+    <rect x="5" y="5" width="5" height="5" fill="#f0f0f0" />
+  </pattern>
+  
+  <!-- Use the pattern to fill a larger rectangle, which serves as the background -->
+  <rect width="100%" height="100%" fill="url(#gridPattern)" />
+</svg>
